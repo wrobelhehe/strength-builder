@@ -1,1 +1,32 @@
-<p>home-view-nav works!</p>
+<div class="header-wrapper">
+    <div class="upper-header"></div>
+    <div class="bottom-header">
+        <div class="navigation-wrapper"></div>
+        <div class="logo"><img src="../../../../assets/img/logo3.png" alt="logo"></div>
+        <div class="nav-elements">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Plans</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="buttons-section" [appFadeInOnScroll]="'right'">
+            <button class="custom-button">
+                <div class="icon-wrapper">
+                    <mat-icon>supervised_user_circle</mat-icon>
+                </div>
+                <span>Sign in</span>
+            </button>
+        </div>
+    </div>
+</div>

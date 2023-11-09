@@ -1,4 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', sans-serif;
+    color: #030B12;
+    scroll-behavior: smooth;
+    background: #E9EDF5
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+li {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #030B12
+}
+
+app-root {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 @import '../src/app/app.component.scss';
 @import '../src/app/strength-builder/strength-builder.component.scss';
 @import '../src/app/strength-builder/home-view/home-view.component.scss';
@@ -6,3 +39,8 @@
 @import '../src/app/strength-builder/home-view/home-view-footer/home-view-footer.component.scss';
 @import '../src/app/strength-builder/home-view/home-view-main/home-view-main.component.scss';
 @import '../src//app/strength-builder/home-view/home-view-nav/home-view-nav.component.scss';
+
+html,
+body {
+    height: 100%;
+}

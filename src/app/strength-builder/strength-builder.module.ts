@@ -6,10 +6,12 @@ import { MainViewComponent } from './main-view/main-view.component';
 
 
 
+
 @NgModule({
   declarations: [
     StrengthBuilderComponent,
     MainViewComponent,
+
 
   ],
   imports: [

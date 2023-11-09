@@ -5,6 +5,9 @@ import { HomeViewNavComponent } from './home-view-nav/home-view-nav.component';
 import { HomeViewMainComponent } from './home-view-main/home-view-main.component';
 import { HomeViewFooterComponent } from './home-view-footer/home-view-footer.component';
 import { HomeViewComponent } from './home-view.component';
+import { MaterialModule } from '../../material/material.module';
+import { FadeInOnScrollDirective } from '../../common/directives/fade-in.directive';
+import { ScrollToDirective } from '../../common/directives/scroll-to.directive';
 
 
 
@@ -13,11 +16,14 @@ import { HomeViewComponent } from './home-view.component';
     HomeViewComponent,
     HomeViewNavComponent,
     HomeViewMainComponent,
-    HomeViewFooterComponent
+    HomeViewFooterComponent,
+    ScrollToDirective,
+    FadeInOnScrollDirective
   ],
   imports: [
     CommonModule,
-    HomeViewRoutingModule
+    HomeViewRoutingModule,
+    MaterialModule,
   ]
 })
 export class HomeViewModule { }
