@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3c86cf white;
+    box-sizing: border-box;
+
+}
+
 html,
 body {
     height: 100%;
@@ -26,6 +34,76 @@ a {
     color: #030B12
 }
 
+.invisible {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.in-viewport-left {
+    animation: fadeInLeft 1s forwards;
+}
+
+.in-viewport-right {
+    animation: fadeInRight 1s forwards;
+}
+
+.in-viewport-up {
+    animation: fadeInUp 1s forwards;
+}
+
+.in-viewport-down {
+    animation: fadeInDown 1s forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 app-root {
     display: block;
     height: 100%;
@@ -39,8 +117,3 @@ app-root {
 @import '../src/app/strength-builder/home-view/home-view-footer/home-view-footer.component.scss';
 @import '../src/app/strength-builder/home-view/home-view-main/home-view-main.component.scss';
 @import '../src//app/strength-builder/home-view/home-view-nav/home-view-nav.component.scss';
-
-html,
-body {
-    height: 100%;
-}

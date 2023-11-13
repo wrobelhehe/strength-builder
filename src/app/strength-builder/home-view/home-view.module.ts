@@ -8,6 +8,7 @@ import { HomeViewComponent } from './home-view.component';
 import { MaterialModule } from '../../material/material.module';
 import { FadeInOnScrollDirective } from '../../common/directives/fade-in.directive';
 import { ScrollToDirective } from '../../common/directives/scroll-to.directive';
+import { HomeViewMidArrowComponent } from './home-view-mid-arrow/home-view-mid-arrow.component';
 
 
 
@@ -18,7 +19,8 @@ import { ScrollToDirective } from '../../common/directives/scroll-to.directive';
     HomeViewMainComponent,
     HomeViewFooterComponent,
     ScrollToDirective,
-    FadeInOnScrollDirective
+    FadeInOnScrollDirective,
+    HomeViewMidArrowComponent
   ],
   imports: [
     CommonModule,

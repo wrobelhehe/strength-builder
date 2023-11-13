@@ -1,26 +1,48 @@
 <div class="header-wrapper">
-    <div class="upper-header"></div>
+    <div class="upper-header">
+        <div class="mac-buttons" (click)="toggleInfoPanel()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="info" [class.info-shown]="!isInfoPanelHidden">
+            <div class="panel"><a href="">Faq</a></div>
+            <div class="panel"><a href="">Data</a></div>
+            <div class="panel"><a href="">Calories calculator</a></div>
+            <div class="panel"><a href="">FFMI calculator</a></div>
+            <div class="panel"><a href="">BMI calculator</a></div>
+        </div>
+    </div>
     <div class="bottom-header">
         <div class="navigation-wrapper"></div>
-        <div class="logo"><img src="../../../../assets/img/logo3.png" alt="logo"></div>
+        <div class="logo"><a href=""></a><img src="../../../../assets/img/logo3.png" alt="logo"></div>
         <div class="nav-elements">
             <ul>
                 <li>
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="" appScrollTo="#about">About</a>
                 </li>
                 <li>
-                    <a href="">Plans</a>
+                    <a href="" appScrollTo="#plans">Plans</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="" appScrollTo="#contact">Contact</a>
                 </li>
 
             </ul>
         </div>
-        <div class="buttons-section" [appFadeInOnScroll]="'right'">
+
+        <button class="button-three" [attr.aria-expanded]="isExpanded ? 'true' : 'false'" (click)="toggleButton()">
+            <svg stroke="var(--button-color)" fill="none" class="hamburger" viewBox="-10 -10 120 120" width="250">
+                <path class="line" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"
+                    d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
+                </path>
+            </svg>
+        </button>
+
+        <div class="buttons-section">
             <button class="custom-button">
                 <div class="icon-wrapper">
                     <mat-icon>supervised_user_circle</mat-icon>
@@ -28,5 +50,45 @@
                 <span>Sign in</span>
             </button>
         </div>
+    </div>
+</div>
+<div class="mobile-nav-elements" [ngClass]="{'expanded': isExpanded}">
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="" appScrollTo="#about">About</a>
+        </li>
+        <li>
+            <a href="" appScrollTo="#plans">Plans</a>
+        </li>
+        <li>
+            <a href="" appScrollTo="#contact">Contact</a>
+        </li>
+
+        <li>
+            <a href="">Faq</a>
+        </li>
+        <li>
+            <a href="">Data</a>
+        </li>
+        <li class="other">
+            <a href="">Calories calculator</a>
+        </li>
+        <li class="other">
+            <a href="">FFMI calculator</a>
+        </li>
+        <li class="other">
+            <a href="">BMI calculator</a>
+        </li>
+    </ul>
+    <div class="mobile-buttons-section">
+        <button class="custom-button">
+            <div class="icon-wrapper">
+                <mat-icon>supervised_user_circle</mat-icon>
+            </div>
+            <span>Sign in</span>
+        </button>
     </div>
 </div>

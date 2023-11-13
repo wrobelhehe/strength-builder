@@ -5,6 +5,7 @@ import { Directive, ElementRef, Renderer2, Input, HostListener, AfterViewInit } 
 })
 export class FadeInOnScrollDirective implements AfterViewInit {
     @Input() appFadeInOnScroll: 'left' | 'right' | 'up' | 'down' = 'up';
+    @Input() delay: number = 0; // Nowy input do określenia opóźnienia w sekundach
     @Input() once: boolean = false;
     private hasAnimated = false;
 
@@ -13,7 +14,9 @@ export class FadeInOnScrollDirective implements AfterViewInit {
     }
 
     ngAfterViewInit() {
-        this.checkIfElementInView();
+        setTimeout(() => {
+            this.checkIfElementInView();
+        }, this.delay * 100);
     }
 
     @HostListener('window:scroll', [])
