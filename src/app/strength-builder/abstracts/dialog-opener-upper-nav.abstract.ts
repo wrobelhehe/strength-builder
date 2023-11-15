@@ -8,7 +8,8 @@ import { FfmiCalcComponent } from '../upper-nav/ffmi-calc/ffmi-calc.component';
 export abstract class DialogOpenerUpperNav {
     constructor(private dialog: MatDialog) { }
 
-    components = [
+
+    components: any = [
         { name: 'FAQ', component: FaqComponent },
         { name: 'Data', component: DataComponent },
         { name: 'Calories Calculator', component: CaloriesCalcComponent },
@@ -23,6 +24,5 @@ export abstract class DialogOpenerUpperNav {
         });
 
     }
-
 
 }

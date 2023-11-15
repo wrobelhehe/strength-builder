@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogOpenerUpperNav } from '../abstracts/dialogOpenerUpperNav.abstract';
+import { DialogOpenerUpperNav } from '../abstracts/dialog-opener-upper-nav.abstract';
 
 @Component({
   selector: 'app-upper-nav',

@@ -9,7 +9,7 @@ import { DataComponent } from './upper-nav/data/data.component';
 import { CaloriesCalcComponent } from './upper-nav/calories-calc/calories-calc.component';
 import { FfmiCalcComponent } from './upper-nav/ffmi-calc/ffmi-calc.component';
 import { BmiCalcComponent } from './upper-nav/bmi-calc/bmi-calc.component';
-import { DialogOpenerUpperNav } from './abstracts/dialogOpenerUpperNav.abstract';
+import { DialogOpenerUpperNav } from './abstracts/dialog-opener-upper-nav.abstract';
 
 @NgModule({
   declarations: [
