@@ -1,18 +1,5 @@
 <div class="header-wrapper">
-    <div class="upper-header">
-        <div class="mac-buttons" (click)="toggleInfoPanel()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="info" [class.info-shown]="!isInfoPanelHidden">
-            <div class="panel"><a href="">Faq</a></div>
-            <div class="panel"><a href="">Data</a></div>
-            <div class="panel"><a href="">Calories calculator</a></div>
-            <div class="panel"><a href="">FFMI calculator</a></div>
-            <div class="panel"><a href="">BMI calculator</a></div>
-        </div>
-    </div>
+
     <div class="bottom-header">
         <div class="navigation-wrapper"></div>
         <div class="logo"><a href=""></a><img src="../../../../assets/img/logo3.png" alt="logo"></div>
@@ -67,10 +54,10 @@
             <a href="" appScrollTo="#contact">Contact</a>
         </li>
 
-        <li>
+        <li class="other">
             <a href="">Faq</a>
         </li>
-        <li>
+        <li class="other">
             <a href="">Data</a>
         </li>
         <li class="other">

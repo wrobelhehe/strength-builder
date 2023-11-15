@@ -9,18 +9,9 @@ import { MatDialog } from '@angular/material/dialog';
 export class HomeViewNavComponent {
 
   isExpanded = false;
-  isInfoPanelHidden = true;
-
   constructor(private dialog: MatDialog) { }
 
   toggleButton(): void {
     this.isExpanded = !this.isExpanded;
   }
-
-  toggleInfoPanel(): void {
-    this.isInfoPanelHidden = !this.isInfoPanelHidden;
-  }
-
-
-
 }

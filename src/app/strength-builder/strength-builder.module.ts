@@ -11,8 +11,6 @@ import { MainViewComponent } from './main-view/main-view.component';
   declarations: [
     StrengthBuilderComponent,
     MainViewComponent,
-
-
   ],
   imports: [
     CommonModule,

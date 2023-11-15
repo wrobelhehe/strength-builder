@@ -1,6 +1,6 @@
 .header-wrapper {
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -9,52 +9,7 @@
     z-index: 1000;
 
 
-    .upper-header {
-        width: 100%;
-        height: 30%;
-        background-color: #030B12;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-        .mac-buttons {
-            display: flex;
-            justify-content: center;
-            align-self: center;
-            margin-left: 5%;
-
-        }
-
-        .mac-buttons>span {
-            display: block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            margin-left: 5px;
-            background-color: #fff;
-
-        }
-
-        .info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            margin-right: 5%;
-
-        }
-
-        .panel {
-            margin-left: 50px;
-
-        }
-
-        .panel a {
-            color: #fff;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-    }
 
     .bottom-header {
         height: 70%;
@@ -68,7 +23,7 @@
 
         .button-three {
             animation-name: fadeInRight;
-            animation-duration: 0.5s;
+            animation-duration: 1s;
             animation-fill-mode: forwards;
             opacity: 0;
             --button-color: black;
@@ -104,7 +59,7 @@
 
         .logo {
             animation-name: fadeInLeft;
-            animation-duration: 0.5s;
+            animation-duration: 1s;
             animation-fill-mode: forwards;
             opacity: 0;
             height: 80px;
@@ -122,7 +77,7 @@
             flex-direction: row;
             width: 70%;
             animation-name: fadeInUp;
-            animation-duration: 0.5s;
+            animation-duration: 1s;
             animation-fill-mode: forwards;
             opacity: 0;
 
@@ -182,7 +137,7 @@
 
         .buttons-section {
             animation-name: fadeInRight;
-            animation-duration: 0.5s;
+            animation-duration: 1s;
             animation-fill-mode: forwards;
             opacity: 0;
             justify-content: center;
@@ -349,7 +304,7 @@
 
     ul {
         width: 100%;
-        height: 50%;
+        height: 20%;
         padding-left: 35px;
         display: flex;
         justify-content: space-between;
@@ -399,12 +354,6 @@
     transform: translateX(0) !important;
 }
 
-
-
-
-
-
-
 @media (max-width: 768px) {
 
     .header-wrapper {
@@ -418,6 +367,10 @@
 
     .mobile-nav-elements {
         display: block;
+
+        ul {
+            height: 50%;
+        }
 
         ul li.other {
             display: block;

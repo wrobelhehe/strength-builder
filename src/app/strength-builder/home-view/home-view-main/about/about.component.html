@@ -1,0 +1,69 @@
+<div class="about-wrapper" id="about">
+    <div class="upper-about">
+        <div class="about-title">
+            <div class="header-section">
+                <h1 [appFadeInOnScroll]="'left'" [once]="true">About us</h1>
+            </div>
+            <div class="text-section">
+                <p [appFadeInOnScroll]="'right'" [once]="true">
+                    Strength Builder is an innovative web application designed to empower fitness enthusiasts and
+                    athletes in their strength training journey. By inputting key performance metrics for exercises such
+                    as back squat, front squat, deadlift, sumo deadlift, power clean, bench press, incline bench press,
+                    dips, overhead press, push press, snatch press, pull up, row, chin up, and user-specific data, the
+                    app crafts a personalized training plan tailored to the user's goals and timeline.<br><br>
+                    The core functionality of Strength Builder lies in its personalized approach. Upon entering their
+                    exercise performance data, users receive a custom workout plan that aligns with their strength
+                    objectives, whether it's improving in powerlifting, building muscle mass, or enhancing overall
+                    fitness. This personalization takes into account the user's current capabilities and progress,
+                    ensuring a challenging yet achievable regimen.<br><br>
+                    In addition to custom plans, Strength Builder offers a selection of pre-designed programs focused on
+                    specific goals like powerlifting meets, general fitness, or muscle hypertrophy. These plans are
+                    crafted by fitness experts and provide a structured path for users with specific targets.<br><br>
+                    The user interface of Strength Builder is intuitive and user-friendly, making it easy for users of
+                    all fitness levels to navigate and utilize the app effectively. The app also includes a progress
+                    tracking feature, allowing users to monitor their improvement over time. This aspect is crucial for
+                    motivation and adjusting the training plan as needed.<br><br>
+                    Strength Builder stands out for its emphasis on science-backed training principles and adaptability.
+                    The algorithm adjusts the training plan based on user feedback and progress, ensuring the plan
+                    remains effective and challenging as the user evolves.<br><br>
+                    In summary, Strength Builder is an all-encompassing web application for strength training
+                    enthusiasts. Whether you're a beginner or an experienced athlete, this app offers a customized,
+                    data-driven approach to help you achieve your strength and fitness goals efficiently and
+                    effectively.
+                </p>
+
+            </div>
+
+
+        </div>
+    </div>
+    <h2 [appFadeInOnScroll]="'left'" [once]="true">Features of our training plans:</h2>
+    <div class="lower-about">
+        <div class="about-row" [appFadeInOnScroll]="'left'" [once]="true">
+            <h3>Individuality</h3>
+            <div class="skill-progress">
+                <div class="skill-progress-fill" [ngStyle]="{'width': 90 + '%'}" [appScrollProgress]="90"></div>
+            </div>
+        </div>
+
+        <div class="about-row" [appFadeInOnScroll]="'left'" [once]="true">
+            <h3>Effectiveness</h3>
+            <div class="skill-progress">
+                <div class="skill-progress-fill" [ngStyle]="{'width': 90 + '%'}" [appScrollProgress]="90"></div>
+            </div>
+        </div>
+        <div class="about-row" [appFadeInOnScroll]="'right'" [once]="true">
+            <h3>Monotony</h3>
+            <div class="skill-progress">
+                <div class="skill-progress-fill" [ngStyle]="{'width': 15 + '%'}" [appScrollProgress]="15"></div>
+            </div>
+        </div>
+        <div class="about-row" [appFadeInOnScroll]="'right'" [once]="true">
+            <h3>Cost of plan</h3>
+            <div class="skill-progress">
+                <div class="skill-progress-fill" [ngStyle]="{'width': 20 + '%'}" [appScrollProgress]="20"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -9,6 +9,12 @@ import { MaterialModule } from '../../material/material.module';
 import { FadeInOnScrollDirective } from '../../common/directives/fade-in.directive';
 import { ScrollToDirective } from '../../common/directives/scroll-to.directive';
 import { HomeViewMidArrowComponent } from './home-view-mid-arrow/home-view-mid-arrow.component';
+import { AboutComponent } from './home-view-main/about/about.component';
+import { PlansComponent } from './home-view-main/plans/plans.component';
+import { HomeComponent } from './home-view-main/home/home.component';
+import { ScrollProgressDirective } from '../../common/directives/scroll-progress';
+import { HomeViewUpperNavComponent } from './home-view-upper-nav/home-view-upper-nav.component';
+import { ContactComponent } from './home-view-main/contact/contact.component';
 
 
 
@@ -20,7 +26,13 @@ import { HomeViewMidArrowComponent } from './home-view-mid-arrow/home-view-mid-a
     HomeViewFooterComponent,
     ScrollToDirective,
     FadeInOnScrollDirective,
-    HomeViewMidArrowComponent
+    HomeViewMidArrowComponent,
+    AboutComponent,
+    PlansComponent,
+    HomeComponent,
+    ScrollProgressDirective,
+    HomeViewUpperNavComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

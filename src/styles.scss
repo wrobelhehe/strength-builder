@@ -3,7 +3,7 @@
 
 * {
     scrollbar-width: thin;
-    scrollbar-color: #3c86cf white;
+    scrollbar-color: #3c86cf transparent;
     box-sizing: border-box;
 
 }
@@ -53,6 +53,32 @@ a {
 
 .in-viewport-down {
     animation: fadeInDown 1s forwards;
+}
+
+@keyframes pulse {
+    0% {
+        height: 100%;
+
+        box-shadow: none;
+    }
+
+    50% {
+        height: 150%;
+        width: 101%;
+        box-shadow: 0 0 15px white;
+        background-color: #3c86cf;
+
+    }
+
+    100% {
+        height: 100%;
+
+        box-shadow: none;
+    }
+}
+
+.progress-pulse-animation {
+    animation: pulse 1s ease-in-out forwards;
 }
 
 @keyframes fadeInLeft {
