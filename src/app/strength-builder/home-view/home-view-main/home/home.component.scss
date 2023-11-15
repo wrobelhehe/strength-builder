@@ -40,7 +40,7 @@
                 position: relative;
                 font-family: 'Comfortaa', sans-serif;
                 cursor: pointer;
-                transition: all 0.4s ease;
+                transition: all 0.2s ease;
                 margin-bottom: 10px;
 
             }
@@ -60,7 +60,7 @@
                 position: relative;
                 font-family: 'Comfortaa', sans-serif;
                 cursor: pointer;
-                transition: all 0.4s ease;
+                transition: all 0.2s ease;
 
             }
 
@@ -75,19 +75,22 @@
     }
 }
 
-
 @media (max-width: 768px) {
     .home-wrapper .upper-view {
-        .custom-button {
-            width: 300px;
-            font-size: 1rem;
+
+        .view-buttons {
+            .custom-button {
+                width: 300px;
+                font-size: 1rem;
+            }
+
+            .custom-button2 {
+                width: 200px;
+                font-size: 1rem;
+
+            }
         }
 
-        .custom-button2 {
-            width: 200px;
-            font-size: 1rem;
-
-        }
     }
 
 }

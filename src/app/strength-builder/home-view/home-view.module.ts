@@ -13,8 +13,8 @@ import { AboutComponent } from './home-view-main/about/about.component';
 import { PlansComponent } from './home-view-main/plans/plans.component';
 import { HomeComponent } from './home-view-main/home/home.component';
 import { ScrollProgressDirective } from '../../common/directives/scroll-progress';
-import { HomeViewUpperNavComponent } from './home-view-upper-nav/home-view-upper-nav.component';
 import { ContactComponent } from './home-view-main/contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -31,13 +31,14 @@ import { ContactComponent } from './home-view-main/contact/contact.component';
     PlansComponent,
     HomeComponent,
     ScrollProgressDirective,
-    HomeViewUpperNavComponent,
     ContactComponent
   ],
   imports: [
     CommonModule,
     HomeViewRoutingModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class HomeViewModule { }

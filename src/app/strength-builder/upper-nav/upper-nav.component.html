@@ -1,0 +1,12 @@
+<div class="upper-header">
+    <div class="mac-buttons">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="info">
+        <div class="panel" *ngFor="let component of components" (click)="openDialog(component.component)">
+            {{ component.name }}
+        </div>
+    </div>
+</div>

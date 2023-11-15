@@ -143,3 +143,8 @@ app-root {
 @import '../src/app/strength-builder/home-view/home-view-footer/home-view-footer.component.scss';
 @import '../src/app/strength-builder/home-view/home-view-main/home-view-main.component.scss';
 @import '../src//app/strength-builder/home-view/home-view-nav/home-view-nav.component.scss';
+
+html,
+body {
+    height: 100%;
+}

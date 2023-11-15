@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeViewUpperNavComponent } from './home-view-upper-nav.component';
+import { HomeViewUpperNavComponent } from './upper-nav.component';
 
 describe('HomeViewUpperNavComponent', () => {
   let component: HomeViewUpperNavComponent;

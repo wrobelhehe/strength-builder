@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 
     .mac-buttons {
         display: flex;
@@ -43,13 +44,17 @@
 
     .panel {
         margin-left: 50px;
-
-    }
-
-    .panel a {
         color: #fff;
         font-size: 0.75rem;
         font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+
+    }
+
+    .panel:active {
+        transform: scale(0.8);
     }
 }
 
