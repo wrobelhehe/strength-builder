@@ -1,0 +1,12 @@
+<button [matMenuTriggerFor]="menu" #menuTrigger class="button-menu">
+    <span *ngIf="currentLang === 'pl'" class="fi fi-pl flag-icon"></span>
+    <span *ngIf="currentLang === 'en'" class="fi fi-gb flag-icon"></span>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="changeLanguage('pl')">
+        <span class="fi fi-pl flag-icon"></span>
+    </button>
+    <button mat-menu-item (click)="changeLanguage('en')">
+        <span class="fi fi-gb flag-icon"></span>
+    </button>
+</mat-menu>

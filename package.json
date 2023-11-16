@@ -25,6 +25,7 @@
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
     "firebase": "^10.6.0",
+    "flag-icons": "^6.15.0",
     "material": "^0.7.6",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

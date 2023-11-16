@@ -18,7 +18,7 @@ export abstract class DialogOpen {
     ];
 
     openDialog(component: any) {
-        this.dialog.open(component)
+        this.dialog.open(component, { restoreFocus: false })
     }
 
 }

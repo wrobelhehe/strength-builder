@@ -9,12 +9,5 @@
             {{ component.name | translate}}
         </div>
     </div>
-    <button (click)="useLanguage('en')">en</button>
-    <button (click)="useLanguage('pl')">pl</button>
-    <!-- <button mat-button [matMenuTriggerFor]="menu" #menuTrigger>Menu</button>
-<mat-menu #menu="matMenu">
-  <button mat-menu-item (click)="openLanguage()">Open dialog</button>
-</mat-menu> -->
-
-
+    <app-language-select class="language-select"></app-language-select>
 </div>

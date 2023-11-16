@@ -182,7 +182,7 @@
                 border: none;
                 position: relative;
                 outline: none;
-                width: max-content;
+                width: 250px;
 
 
 
@@ -227,13 +227,13 @@
             }
 
             .custom-button:hover .icon-wrapper {
-                transform: translateX(-160%);
+                transform: translateX(-200%);
             }
 
             .custom-button:hover span {
                 transform: translateX(0);
                 opacity: 1;
-                left: calc(25%);
+                left: calc(30%);
             }
         }
     }

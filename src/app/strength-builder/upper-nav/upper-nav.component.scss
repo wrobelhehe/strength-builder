@@ -6,6 +6,8 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    color: white;
+
 
     .mac-buttons {
         display: flex;
@@ -34,7 +36,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        margin-right: 5%;
+        // margin-right: 5%;
         animation-name: fadeInDown;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -42,8 +44,15 @@
 
     }
 
-    .panel {
+    .language-select {
+        margin-right: 5%;
+    }
+
+    .panel:not(:first-child) {
         margin-left: 50px;
+    }
+
+    .panel {
         color: #fff;
         font-size: 0.75rem;
         font-weight: 500;
