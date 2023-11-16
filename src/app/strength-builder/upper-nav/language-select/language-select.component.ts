@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-language-select',
@@ -9,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class LanguageSelectComponent {
   currentLang: string;
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private spinner: NgxSpinnerService) {
     this.currentLang = translate.currentLang;
     translate.onLangChange.subscribe(langChangeEvent => {
       this.currentLang = langChangeEvent.lang;
@@ -17,7 +18,16 @@ export class LanguageSelectComponent {
   }
 
   changeLanguage(lang: string) {
-    this.translate.use(lang);
+    if (this.currentLang !== lang) {
+      this.spinner.show();
+
+      this.translate.use(lang).subscribe(() => {
+        setTimeout(() => {
+          this.spinner.hide();
+
+        }, 500);
+      });
+    }
   }
 
 }

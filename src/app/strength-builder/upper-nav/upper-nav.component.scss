@@ -36,7 +36,6 @@
         justify-content: center;
         align-items: center;
         flex-direction: row;
-        // margin-right: 5%;
         animation-name: fadeInDown;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -45,6 +44,10 @@
     }
 
     .language-select {
+        animation-name: fadeInRight;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
         margin-right: 5%;
     }
 
