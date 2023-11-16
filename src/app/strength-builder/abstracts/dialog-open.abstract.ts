@@ -18,7 +18,10 @@ export abstract class DialogOpen {
     ];
 
     openDialog(component: any) {
-        this.dialog.open(component, { restoreFocus: false })
+        this.dialog.open(component, {
+            width: "100vw",
+            height: "70vh"
+        })
     }
 
 }

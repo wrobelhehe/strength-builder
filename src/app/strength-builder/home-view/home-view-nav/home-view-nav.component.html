@@ -54,21 +54,10 @@
             <a href="" appScrollTo="#contact">{{'contact' | translate}}</a>
         </li>
 
-        <li class="other">
-            <a href="">{{'faq' | translate}}</a>
+        <li class="other" *ngFor="let component of components" (click)="openDialog(component.component)">
+            <a>{{ component.name | translate}}</a>
         </li>
-        <li class="other">
-            <a href="">{{'data' | translate}}</a>
-        </li>
-        <li class="other">
-            <a href="">{{'caloriesCalculator' | translate}}</a>
-        </li>
-        <li class="other">
-            <a href="">{{'ffmiCalculator' | translate}}</a>
-        </li>
-        <li class="other">
-            <a href="">{{'bmiCalculator' | translate}}</a>
-        </li>
+
     </ul>
     <div class="mobile-buttons-section">
         <button class="custom-button">
