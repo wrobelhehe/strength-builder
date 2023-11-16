@@ -10,7 +10,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class ContactComponent {
 
-  submitMessage: string = 'Email sent successfully!';
+  submitMessage: string = 'submit_confirmation';
   isSubmit: boolean = false;
   spinning = false
   contactForm: FormGroup;

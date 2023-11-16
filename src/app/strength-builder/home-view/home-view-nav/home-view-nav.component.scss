@@ -164,7 +164,7 @@
                 border: none;
                 position: relative;
                 outline: none;
-                width: 150px;
+                width: 200px;
                 height: 40px;
 
                 .icon-wrapper {
@@ -200,7 +200,7 @@
             }
 
             .custom-button:hover .icon-wrapper {
-                transform: translateX(-200%);
+                transform: translateX(-150%);
             }
 
             .custom-button:hover span {

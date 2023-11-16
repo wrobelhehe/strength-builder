@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainViewRoutingModule } from './main-view-routing.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -8,7 +9,9 @@ import { MainViewRoutingModule } from './main-view-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    MainViewRoutingModule
+    MainViewRoutingModule,
+    TranslateModule.forChild()
+
   ]
 })
 export class MainViewModule { }

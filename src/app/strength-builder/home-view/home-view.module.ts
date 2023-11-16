@@ -15,6 +15,8 @@ import { HomeComponent } from './home-view-main/home/home.component';
 import { ScrollProgressDirective } from '../../common/directives/scroll-progress';
 import { ContactComponent } from './home-view-main/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -35,10 +37,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     HomeViewRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TranslateModule.forChild()
+
   ]
 })
 export class HomeViewModule { }
