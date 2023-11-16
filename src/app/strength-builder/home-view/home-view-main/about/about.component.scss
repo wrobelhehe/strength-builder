@@ -6,7 +6,7 @@
     align-items: flex-start;
     color: white;
     flex-direction: column;
-    padding: 10vh 5vw;
+    padding: 5vh 5vw;
     background-image: linear-gradient(to bottom, rgba(3, 11, 18, 0.90), rgba(3, 11, 18, 0.90)), url('../../../../../assets/img/bgc.png');
     background-size: cover, cover;
     background-repeat: no-repeat, no-repeat;
@@ -43,6 +43,7 @@
                 width: 50%;
 
                 p {
+                    font-size: 80%;
                     width: 100%;
 
                 }
