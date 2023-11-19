@@ -1,6 +1,8 @@
+@import url("../common-styles/common-styles.scss");
+
 .dialog-wrapper {
-    width: '100%';
-    height: '100%';
+    width: 100%;
+    height: 100%;
 
 
     .dialog-header {
@@ -35,20 +37,33 @@
 
         }
 
-
     }
 
     .dialog-content {
         width: 100%;
+        min-height: 100%;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 95vh;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: 5vh 2vw;
+
+        background-image: linear-gradient(to bottom, rgba(3, 11, 18, 0.90), rgba(3, 11, 18, 0.90)), url('../../../../assets/img/calories-bgc.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+
+        p {
+            color: white;
+        }
+
+        .radios {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 
-    // background-image: linear-gradient(to bottom, rgba(3, 11, 18, 0.90), rgba(3, 11, 18, 0.90)), url('../../../../assets/img/data3 .png');
-    // background-size: cover, cover;
-    // background-repeat: no-repeat, no-repeat;
-    // background-position: center, 80%;
+
 }
