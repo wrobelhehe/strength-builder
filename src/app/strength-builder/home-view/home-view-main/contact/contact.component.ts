@@ -31,6 +31,7 @@ export class ContactComponent {
         this.submitMessage = 'Email sent successfully!';
         this.spinning = false
         this.isSubmit = true
+        this.contactForm.reset()
         setTimeout(() => this.isSubmit = false, 5000);
       }).catch(error => {
         console.error('Error sending message: ', error);

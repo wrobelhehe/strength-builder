@@ -11,6 +11,7 @@ import { FfmiCalcComponent } from './upper-nav/ffmi-calc/ffmi-calc.component';
 import { BmiCalcComponent } from './upper-nav/bmi-calc/bmi-calc.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     StrengthBuilderRoutingModule,
     MaterialModule,
     TranslateModule.forChild(),
+    SharedModule,
     FormsModule,
     ReactiveFormsModule
 
