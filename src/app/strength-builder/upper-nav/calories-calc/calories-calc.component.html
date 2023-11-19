@@ -7,8 +7,7 @@
         </div>
     </div>
     <div class="dialog-content">
-
-        <mat-stepper orientation="vertical" [linear]="true" #stepper>
+        <mat-stepper orientation="vertical" [linear]="true" #stepper *ngIf="!isCalculated">
             <mat-step [stepControl]="personalFormGroup">
                 <form [formGroup]="personalFormGroup">
                     <ng-template class="label-title" matStepLabel>{{ 'personal_info' | translate }}</ng-template>
@@ -18,9 +17,11 @@
                             <input formControlName="weight" id="weight" type="number" required>
                             <span>{{ 'form_weight_label' | translate }}</span>
                         </div>
-                        <div *ngIf="personalFormGroup.get('weight')?.invalid && personalFormGroup.get('weight')?.touched"
-                            class="error-message">
-                            {{ 'form_weight_error' | translate }}
+                        <div *ngIf="personalFormGroup.get('weight')?.hasError('min')" class="error-message">
+                            {{ 'form_weight_min_error' | translate }}
+                        </div>
+                        <div *ngIf="personalFormGroup.get('weight')?.hasError('max')" class="error-message">
+                            {{ 'form_weight_max_error' | translate }}
                         </div>
                     </div>
                     <div class="control-wrapper">
@@ -29,9 +30,11 @@
                             <input formControlName="height" id="height" type="number" required>
                             <span>{{ 'form_height_label' | translate }}</span>
                         </div>
-                        <div *ngIf="personalFormGroup.get('height')?.invalid && personalFormGroup.get('height')?.touched"
-                            class="error-message">
-                            {{ 'form_height_error' | translate }}
+                        <div *ngIf="personalFormGroup.get('height')?.hasError('min')" class="error-message">
+                            {{ 'form_height_min_error' | translate }}
+                        </div>
+                        <div *ngIf="personalFormGroup.get('height')?.hasError('max')" class="error-message">
+                            {{ 'form_height_max_error' | translate }}
                         </div>
                     </div>
                     <div class="control-wrapper">
@@ -40,17 +43,17 @@
                             <input formControlName="age" id="age" type="number" required>
                             <span>{{ 'form_age_label' | translate }}</span>
                         </div>
-                        <div *ngIf="personalFormGroup.get('age')?.invalid && personalFormGroup.get('age')?.touched"
-                            class="error-message">
-                            {{ 'form_age_error' | translate }}
+                        <div *ngIf="personalFormGroup.get('age')?.hasError('min')" class="error-message">
+                            {{ 'form_age_min_error' | translate }}
+                        </div>
+                        <div *ngIf="personalFormGroup.get('age')?.hasError('max')" class="error-message">
+                            {{ 'form_age_max_error' | translate }}
                         </div>
                     </div>
                     <mat-radio-group formControlName="gender" aria-label="Select an option">
                         <mat-radio-button value="m"> {{ 'male' | translate }}</mat-radio-button>
                         <mat-radio-button value="f"> {{ 'female' | translate }}</mat-radio-button>
                     </mat-radio-group>
-
-
                     <div class="buttons-section">
                         <button class="custom-button" matStepperNext [disabled]="personalFormGroup.invalid">
                             <div class="icon-wrapper">
@@ -59,7 +62,6 @@
                             <span>{{ 'form_next_button' | translate }}</span>
                         </button>
                     </div>
-
                 </form>
             </mat-step>
             <mat-step [stepControl]="activityFormGroup">
@@ -71,8 +73,6 @@
                             [value]="activity.value">
                             {{ activity.translation | translate
                             }}</mat-radio-button>
-
-
                     </mat-radio-group>
                     <div class="buttons-section">
                         <button class="custom-button" matStepperPrevious>
@@ -87,7 +87,6 @@
                             </div>
                             <span>{{ 'form_next_button' | translate }}</span>
                         </button>
-
                     </div>
                 </form>
             </mat-step>
@@ -98,8 +97,6 @@
                         <mat-radio-button *ngFor="let goal of goals" [value]="goal.value">
                             {{ goal.translation | translate
                             }}</mat-radio-button>
-
-
                     </mat-radio-group>
                     <div class="buttons-section">
                         <button class="custom-button" matStepperPrevious>
@@ -114,12 +111,11 @@
                             </div>
                             <span>{{ 'form_next_button' | translate }}</span>
                         </button>
-
                     </div>
                 </form>
             </mat-step>
             <mat-step>
-                <ng-template matStepLabel>Done</ng-template>
+                <ng-template matStepLabel>{{ 'summary' | translate }}</ng-template>
                 <p>{{"form_calculate_info" | translate}}</p>
                 <div class="buttons-section">
                     <button class="custom-button" matStepperPrevious>
@@ -134,10 +130,27 @@
                         </div>
                         <span>{{ 'form_calculate_button' | translate }}</span>
                     </button>
-
                 </div>
             </mat-step>
         </mat-stepper>
-
+        <div class="right-content" *ngIf="isCalculated">
+            <div class="chart">
+                <canvas baseChart [type]="'pie'" [datasets]="pieChartDatasets" [labels]="pieChartLabels"
+                    [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+                </canvas>
+            </div>
+            <div class="chart-desc">
+                <h2>{{goalText | translate}} <span class="blue">{{caloricRequirement}} kcal</span></h2>
+                <h3>{{ 'protein' | translate }}<span class="blue">{{pieChartDatasets[0].data[0]}} g</span>
+                    ({{pieChartDatasets[0].data[0]*4}}
+                    kcal)</h3>
+                <h3>{{ 'fat' | translate }} <span class="blue">{{pieChartDatasets[0].data[1]}} g</span>
+                    ({{pieChartDatasets[0].data[1]*9}} kcal)
+                </h3>
+                <h3>{{ 'carbs' | translate }} <span class="blue">{{pieChartDatasets[0].data[2]}} g</span>
+                    ({{pieChartDatasets[0].data[2]*4}} kcal)
+                </h3>
+            </div>
+        </div>
     </div>
 </div>

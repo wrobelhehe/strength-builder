@@ -42,7 +42,7 @@
 
 ::ng-deep mat-stepper {
     background-color: transparent !important;
-    width: 50% !important;
+    width: 80% !important;
 }
 
 ::ng-deep .mat-step-header .mat-step-icon-state-number {
@@ -261,6 +261,24 @@
         box-shadow: 0 0 10px -3px #770b05;
 
         border-radius: 5px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .buttons-section {
+        flex-direction: column;
+
+        .custom-button {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    ::ng-deep mat-stepper {
+        background-color: transparent !important;
+        width: 100% !important;
     }
 
 }

@@ -14,6 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedModule } from './shared/shared.module';
+import { NgChartsModule } from 'ng2-charts';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(http: HttpClient) {
         useFactory: (HttpLoaderFactory),
         deps: [HttpClient]
       }
-    })
+    }),
+    NgChartsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

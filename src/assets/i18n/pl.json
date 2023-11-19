@@ -159,5 +159,22 @@
     "goal-1": "Chce utrzymać wagę",
     "goal-2": "Chce przytyć",
     "form_calculate_button": "Oblicz",
-    "form_calculate_info": "Czy chcesz obliczyć swoje zapotrzebowanie kaloryczne"
+    "form_calculate_info": "Czy chcesz obliczyć swoje zapotrzebowanie kaloryczne?",
+    "kcal": "Ilość kalorii: ",
+    "protein": "Białko: ",
+    "fat": "Tłuszcze: ",
+    "carbs": "Węglowodany: ",
+    "protein_label": "Białko",
+    "fat_label": "Tłuszcze",
+    "carbs_label": "Węglowodany",
+    "goal-0-desc": "Aby schudnąć, uwzględniając Twoje całkowite zapotrzebowanie kaloryczne, powinieneś dostarczać organizmowi: ",
+    "goal-1-desc": "Aby utrzymać wagę, uwzględniając Twoje całkowite zapotrzebowanie kaloryczne, powinieneś dostarczać organizmowi: ",
+    "goal-2-desc": "Aby przytyć, uwzględniając Twoje całkowite zapotrzebowanie kaloryczne, powinieneś dostarczać organizmowi: ",
+    "summary": "Podsumowanie",
+    "form_weight_min_error": "Waga musi wynosić co najmniej 1 kg",
+    "form_weight_max_error": "Waga nie może przekraczać 500 kg",
+    "form_height_min_error": "Wzrost musi wynosić co najmniej 1 cm",
+    "form_height_max_error": "Wzrost nie może przekraczać 280 cm",
+    "form_age_min_error": "Wiek musi wynosić co najmniej 1 rok",
+    "form_age_max_error": "Wiek nie może przekraczać 120 lat"
 }

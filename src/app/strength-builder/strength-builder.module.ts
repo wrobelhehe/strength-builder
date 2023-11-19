@@ -12,6 +12,7 @@ import { BmiCalcComponent } from './upper-nav/bmi-calc/bmi-calc.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SharedModule } from '../shared/shared.module';
     TranslateModule.forChild(),
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgChartsModule
 
   ]
 })

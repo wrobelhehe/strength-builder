@@ -21,6 +21,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CookiesComponent } from './home-view-footer/cookies/cookies.component';
 import { TermsComponent } from './home-view-footer/terms/terms.component';
 import { PrivacyComponent } from './home-view-footer/privacy/privacy.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 
@@ -50,7 +51,8 @@ import { PrivacyComponent } from './home-view-footer/privacy/privacy.component';
     ReactiveFormsModule,
     FormsModule,
     TranslateModule.forChild(),
-    SharedModule
+    SharedModule,
+    NgChartsModule
 
   ]
 })

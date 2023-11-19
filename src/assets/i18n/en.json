@@ -161,5 +161,22 @@
     "goal-1": "I want to maintain my weight",
     "goal-2": "I want to gain weight",
     "form_calculate_button": "Calculate",
-    "form_calculate_info": "Do you want to calculate your caloric needs?"
+    "form_calculate_info": "Do you want to calculate your caloric needs?",
+    "kcal": "Calories: ",
+    "protein": "Protein: ",
+    "fat": "Fat: ",
+    "carbs": "Carbs: ",
+    "protein_label": "Protein",
+    "fat_label": "Fat",
+    "carbs_label": "Carbs",
+    "goal-0-desc": "To lose weight, considering your total caloric requirement, you should provide your body: ",
+    "goal-1-desc": "To maintain your weight, considering your total caloric requirement, you should provide your body: ",
+    "goal-2-desc": "To gain weight, considering your total caloric requirement, you should provide your body: ",
+    "summary": "Summary",
+    "form_weight_min_error": "Weight must be at least 1 kg",
+    "form_weight_max_error": "Weight must not exceed 500 kg",
+    "form_height_min_error": "Height must be at least 1 cm",
+    "form_height_max_error": "Height must not exceed 280 cm",
+    "form_age_min_error": "Age must be at least 1 year",
+    "form_age_max_error": "Age must not exceed 120 years"
 }
