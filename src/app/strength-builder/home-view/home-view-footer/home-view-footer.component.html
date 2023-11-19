@@ -1,3 +1,56 @@
 <div class="footer-wrapper">
-    <h1>test</h1>
+    <div class="upper-footer">
+        <div class="footer-section footer-logo">
+            <div class="inside-wrapper">
+                <img src="../../../../assets/img/logo3.png" alt="">
+                <h2>Strength Builder</h2>
+                <span> {{ 'footerDesc' | translate }}</span>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="inside-wrapper">
+                <h3> {{ 'mainNav' | translate }}</h3>
+                <div class="nav-elements">
+                    <ul>
+                        <li>
+                            <a href="/">{{'home' | translate}}</a>
+                        </li>
+                        <li>
+                            <a href="" appScrollTo="#about">{{'about' | translate}}</a>
+                        </li>
+                        <li>
+                            <a href="" appScrollTo="#plans">{{'plans' | translate}}</a>
+                        </li>
+                        <li>
+                            <a href="" appScrollTo="#contact">{{'contact' | translate}}</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="inside-wrapper">
+                <h3> {{ 'more' | translate }}</h3>
+                <div class="panel" *ngFor="let component of components" (click)="openDialog(component.component)">
+                    {{ component.name | translate}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="bottom-footer">
+        <div class="bottom-left"><span> {{ 'copyright' | translate }} </span></div>
+        <div class="bottom-right">
+            <div class="inside-bottom-right">
+                <div class="panel" *ngFor="let component of secondComponents" (click)="openDialog(component.component)">
+                    {{ component.name | translate}}
+                </div>
+                <app-language-select></app-language-select>
+            </div>
+        </div>
+
+
+
+    </div>
 </div>

@@ -10,6 +10,13 @@
 
 .flag-icon {
     font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Dodanie cienia */
+}
+
+
+::ng-deep .cdk-overlay-pane .lang-menu {
+    min-width: 40px;
 }
 
 .mat-menu-content {

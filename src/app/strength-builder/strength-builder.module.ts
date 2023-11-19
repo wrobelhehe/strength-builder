@@ -10,6 +10,7 @@ import { CaloriesCalcComponent } from './upper-nav/calories-calc/calories-calc.c
 import { FfmiCalcComponent } from './upper-nav/ffmi-calc/ffmi-calc.component';
 import { BmiCalcComponent } from './upper-nav/bmi-calc/bmi-calc.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,15 @@ import { TranslateModule } from '@ngx-translate/core';
     CaloriesCalcComponent,
     FfmiCalcComponent,
     BmiCalcComponent,
+
   ],
   imports: [
     CommonModule,
     StrengthBuilderRoutingModule,
     MaterialModule,
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    FormsModule,
+    ReactiveFormsModule
 
   ]
 })

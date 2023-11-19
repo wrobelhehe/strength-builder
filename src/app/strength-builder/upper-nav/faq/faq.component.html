@@ -7,13 +7,39 @@
         </div>
     </div>
     <div class="dialog-content">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel nulla vero ab. Sequi, assumenda! Recusandae,
-        adipisci fugiat! Minima, maxime itaque perferendis voluptates sequi molestias consectetur magnam beatae id atque
-        tenetur voluptatem perspiciatis nemo non, modi unde libero maiores. Eius, pariatur deleniti dignissimos nisi
-        incidunt quia fugit officia nulla itaque numquam accusantium in architecto cupiditate. Ea ut consequuntur qui
-        non voluptatem? Et vero autem nostrum cum quidem, consequuntur minus? Eius tempore nobis facilis ipsam
-        laboriosam perspiciatis! Inventore sequi repudiandae odio adipisci consequuntur quos molestias temporibus
-        aliquam optio quibusdam suscipit excepturi, ea ratione, exercitationem fugiat rem cum. Optio omnis libero
-        dignissimos aperiam.
+        <div class="faq-section">
+            <div class="left-faq">
+                <h1> {{ 'faq' | translate }}
+                </h1>
+            </div>
+            <div class="right-faq">
+                <form [formGroup]="faqForm" class="form-group">
+                    <div class="inputBox" [class.error]="faqForm.get('query')?.invalid">
+                        <input formControlName="query" id="query" type="text">
+                        <span
+                            [ngClass]="{'active': faqForm.get('query')?.value, 'invalid': faqForm.get('query')?.invalid}">
+                            {{ 'search' | translate }}
+                        </span>
+                    </div>
+
+                    <div *ngIf="faqForm.get('query')?.errors?.['noResults']" class="search-results">
+                        <span> {{ 'noRecords' | translate }}
+                        </span>
+                    </div>
+
+                </form>
+                <mat-accordion>
+                    <mat-expansion-panel *ngFor="let faq of filteredFaqs">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{ faq.question | translate}}
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>{{ faq.answer | translate}}</p>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+
+        </div>
     </div>
 </div>

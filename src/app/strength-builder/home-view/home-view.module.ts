@@ -17,6 +17,10 @@ import { ContactComponent } from './home-view-main/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { CookiesComponent } from './home-view-footer/cookies/cookies.component';
+import { TermsComponent } from './home-view-footer/terms/terms.component';
+import { PrivacyComponent } from './home-view-footer/privacy/privacy.component';
 
 
 
@@ -33,7 +37,10 @@ import { TranslateModule } from '@ngx-translate/core';
     PlansComponent,
     HomeComponent,
     ScrollProgressDirective,
-    ContactComponent
+    ContactComponent,
+    CookiesComponent,
+    TermsComponent,
+    PrivacyComponent,
   ],
   imports: [
     CommonModule,
@@ -42,7 +49,8 @@ import { TranslateModule } from '@ngx-translate/core';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    SharedModule
 
   ]
 })

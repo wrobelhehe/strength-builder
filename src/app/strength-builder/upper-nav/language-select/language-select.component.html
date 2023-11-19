@@ -2,11 +2,11 @@
     <span *ngIf="currentLang === 'pl'" class="fi fi-pl flag-icon"></span>
     <span *ngIf="currentLang === 'en'" class="fi fi-gb flag-icon"></span>
 </button>
-<mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="changeLanguage('pl')">
+<mat-menu #menu="matMenu" class="lang-menu">
+    <button class="flag-button" mat-menu-item yPosition="below" (click)="changeLanguage('pl')">
         <span class="fi fi-pl flag-icon"></span>
     </button>
-    <button mat-menu-item (click)="changeLanguage('en')">
+    <button class="flag-button" mat-menu-item (click)="changeLanguage('en')">
         <span class="fi fi-gb flag-icon"></span>
     </button>
 </mat-menu>

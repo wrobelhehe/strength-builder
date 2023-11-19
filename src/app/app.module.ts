@@ -12,8 +12,8 @@ import { MaterialModule } from './material/material.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { LanguageSelectComponent } from './strength-builder/upper-nav/language-select/language-select.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { SharedModule } from './shared/shared.module';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -25,12 +25,12 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     UpperNavComponent,
-    LanguageSelectComponent,
 
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
+    SharedModule,
     AppRoutingModule,
     RouterModule,
     BrowserAnimationsModule,
