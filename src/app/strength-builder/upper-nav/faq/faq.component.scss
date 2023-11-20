@@ -217,15 +217,43 @@
     .dialog-wrapper {
         .dialog-content {
             .faq-section {
+                .left-faq {
+                    h1 {
+                        font-size: 3rem;
+                    }
+                }
+
                 .right-faq {
                     mat-accordion {
                         width: 100%;
+
+                        mat-expansion-panel-header {
+                            mat-panel-title {
+                                font-size: 70%;
+                            }
+                        }
                     }
 
                     .inputBox {
                         width: 100%;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .dialog-wrapper {
+        .dialog-content {
+            .faq-section {
+                .left-faq {
+                    h1 {
+                        font-size: 2rem;
+                    }
+                }
+
+
             }
         }
     }

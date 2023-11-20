@@ -41,6 +41,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         padding: 5vh 2vw;
 
         background-image: linear-gradient(to bottom, rgba(3, 11, 18, 0.90), rgba(3, 11, 18, 0.90)), url('../../../../assets/img/calories-bgc.png');
@@ -48,6 +49,16 @@
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+
+
+        h1 {
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            font-size: 6rem;
+            color: white;
+            text-shadow: 3px 3px 0px #3c86cf;
+        }
 
         p {
             color: white;
@@ -143,6 +154,9 @@
     .dialog-wrapper {
 
         .dialog-content {
+            h1 {
+                font-size: 3rem;
+            }
 
             .right-content {
                 width: 100%;
@@ -177,6 +191,21 @@
                     }
                 }
             }
+        }
+
+
+    }
+}
+
+@media (max-width: 768px) {
+    .dialog-wrapper {
+
+        .dialog-content {
+            h1 {
+                font-size: 2rem;
+            }
+
+
         }
 
 
