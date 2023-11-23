@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { NgChartsModule } from 'ng2-charts';
 import { FadeInOnScrollDirective } from '../common/directives/fade-in.directive';
+import { BottomFooterComponent } from './bottom-footer/bottom-footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,6 @@ import { FadeInOnScrollDirective } from '../common/directives/fade-in.directive'
     CaloriesCalcComponent,
     FfmiCalcComponent,
     BmiCalcComponent
-
   ],
   imports: [
     CommonModule,

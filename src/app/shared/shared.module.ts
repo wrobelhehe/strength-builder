@@ -6,12 +6,15 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FadeInOnScrollDirective } from '../common/directives/fade-in.directive';
 import { ScrollToDirective } from '../common/directives/scroll-to.directive';
 import { ScrollProgressDirective } from '../common/directives/scroll-progress';
+import { UpperNavComponent } from '../strength-builder/upper-nav/upper-nav.component';
+import { BottomFooterComponent } from '../strength-builder/bottom-footer/bottom-footer.component';
 
 
 
 @NgModule({
   declarations: [LanguageSelectComponent, ScrollToDirective,
-    FadeInOnScrollDirective, ScrollProgressDirective,
+    FadeInOnScrollDirective, ScrollProgressDirective, UpperNavComponent, BottomFooterComponent
+
 
   ],
   imports: [
@@ -22,7 +25,7 @@ import { ScrollProgressDirective } from '../common/directives/scroll-progress';
   ],
   exports: [
     LanguageSelectComponent,
-    ScrollProgressDirective, ScrollToDirective, FadeInOnScrollDirective
+    ScrollProgressDirective, ScrollToDirective, FadeInOnScrollDirective, UpperNavComponent, BottomFooterComponent
   ]
 
 })

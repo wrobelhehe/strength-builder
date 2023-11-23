@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { UpperNavComponent } from './strength-builder/upper-nav/upper-nav.component';
 import { environment } from 'src/environments/environment';
 import { MaterialModule } from './material/material.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -24,9 +23,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    UpperNavComponent,
-
+    AppComponent
   ],
   imports: [
     HttpClientModule,
