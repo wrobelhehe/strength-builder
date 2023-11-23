@@ -15,6 +15,17 @@ export class CaloriesCalcComponent extends DialogClose {
 
   public pieChartOptions: ChartOptions<'pie'> = {
     responsive: false,
+    plugins: {
+      legend: {
+        labels: {
+          color: 'white',
+        },
+      },
+      tooltip: {
+        titleColor: 'white',
+        bodyColor: 'white',
+      },
+    },
   };
   public pieChartLabels = [this.translate.instant('protein_label'),
   this.translate.instant('fat_label'),
@@ -65,6 +76,13 @@ export class CaloriesCalcComponent extends DialogClose {
 
   constructor(dialogRef: MatDialogRef<any>, private formBuilder: FormBuilder, private translate: TranslateService,) {
     super(dialogRef)
+  }
+
+  resetCalculator() {
+    this.isCalculated = false;
+    this.personalFormGroup.reset()
+    this.activityFormGroup.reset()
+    this.goalFormGroup.reset()
   }
 
   getGoalText(): string {

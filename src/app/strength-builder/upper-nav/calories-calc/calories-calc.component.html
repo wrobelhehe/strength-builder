@@ -136,21 +136,35 @@
         </mat-stepper>
         <div class="right-content" *ngIf="isCalculated">
             <div class="chart">
-                <canvas baseChart [type]="'pie'" [datasets]="pieChartDatasets" [labels]="pieChartLabels"
-                    [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+                <canvas [appFadeInOnScroll]="'left'" [once]="true" baseChart [type]="'pie'"
+                    [datasets]="pieChartDatasets" [labels]="pieChartLabels" [options]="pieChartOptions"
+                    [plugins]="pieChartPlugins" [legend]="pieChartLegend">
                 </canvas>
             </div>
             <div class="chart-desc">
-                <h2>{{goalText | translate}} <span class="blue">{{caloricRequirement}} kcal</span></h2>
-                <h3>{{ 'protein' | translate }}<span class="blue">{{pieChartDatasets[0].data[0]}} g</span>
+                <h2 [appFadeInOnScroll]="'right'" [once]="true">{{goalText | translate}} <span
+                        class="blue">{{caloricRequirement}} kcal</span></h2>
+                <h3 [appFadeInOnScroll]="'up'" [once]="true">{{ 'protein' | translate }}<span
+                        class="blue">{{pieChartDatasets[0].data[0]}} g</span>
                     ({{pieChartDatasets[0].data[0]*4}}
                     kcal)</h3>
-                <h3>{{ 'fat' | translate }} <span class="blue">{{pieChartDatasets[0].data[1]}} g</span>
+                <h3 [appFadeInOnScroll]="'left'" [once]="true">{{ 'fat' | translate }} <span
+                        class="blue">{{pieChartDatasets[0].data[1]}} g</span>
                     ({{pieChartDatasets[0].data[1]*9}} kcal)
                 </h3>
-                <h3>{{ 'carbs' | translate }} <span class="blue">{{pieChartDatasets[0].data[2]}} g</span>
+                <h3 [appFadeInOnScroll]="'right'" [once]="true">{{ 'carbs' | translate }} <span
+                        class="blue">{{pieChartDatasets[0].data[2]}} g</span>
                     ({{pieChartDatasets[0].data[2]*4}} kcal)
                 </h3>
+                <div class="buttons-section">
+                    <button class="custom-button" (click)="resetCalculator()" [appFadeInOnScroll]="'left'"
+                        [once]="true">
+                        <div class="icon-wrapper">
+                            <mat-icon>refresh</mat-icon>
+                        </div>
+                        <span>{{ 'form_reset_button' | translate }}</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

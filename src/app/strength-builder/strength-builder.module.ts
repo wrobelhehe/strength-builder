@@ -13,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { NgChartsModule } from 'ng2-charts';
+import { FadeInOnScrollDirective } from '../common/directives/fade-in.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { NgChartsModule } from 'ng2-charts';
     DataComponent,
     CaloriesCalcComponent,
     FfmiCalcComponent,
-    BmiCalcComponent,
+    BmiCalcComponent
 
   ],
   imports: [

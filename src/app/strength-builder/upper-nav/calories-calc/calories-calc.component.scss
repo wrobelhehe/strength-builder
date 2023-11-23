@@ -39,7 +39,7 @@
         width: 100%;
         min-height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: column;
         padding: 5vh 2vw;
@@ -88,6 +88,8 @@
 
             .chart-desc {
                 width: 50%;
+
+
             }
 
             .chart {
@@ -179,6 +181,10 @@
                     flex-direction: column;
                     text-align: center;
                     width: 100%;
+
+                    .buttons-section {
+                        justify-content: center;
+                    }
                 }
 
                 .chart {
