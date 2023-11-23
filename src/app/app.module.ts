@@ -14,12 +14,12 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { SharedModule } from './shared/shared.module';
 import { NgChartsModule } from 'ng2-charts';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
-
 
 @NgModule({
   declarations: [
@@ -34,14 +34,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     MaterialModule,
     NgxSpinnerModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
         useFactory: (HttpLoaderFactory),
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+
+      },
+      isolate: false
     }),
     NgChartsModule
   ],
