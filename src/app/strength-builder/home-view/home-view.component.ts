@@ -1,6 +1,5 @@
 import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, HostListener } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home-view',
@@ -48,16 +47,7 @@ export class HomeViewComponent {
 
     }
   }
-
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-
-  constructor(private translate: TranslateService) {
-    console.log(translate.getDefaultLang())
-    translate.onLangChange.subscribe(langChangeEvent => {
-      console.log(langChangeEvent.lang)
-    });
   }
 }

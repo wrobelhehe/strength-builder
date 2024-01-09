@@ -3,6 +3,7 @@ import { AngularFireAuth } from "@angular/fire/compat/auth";
 import { Router } from "@angular/router";
 import { GoogleAuthProvider } from "@angular/fire/auth"
 import { NgxSpinnerService } from "ngx-spinner";
+import { map } from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -12,10 +13,8 @@ export class AuthService {
 
     }
     signInWithGoogle() {
-        this.spinner.show();
-        return this.fireAuth.signInWithPopup(new GoogleAuthProvider).then(() => {
+        return this.fireAuth.signInWithPopup(new GoogleAuthProvider).then((user) => {
             this.router.navigate(['/strength-builder/main']);
-            this.spinner.hide();
         }, err => {
             console.log(err)
         })
@@ -24,7 +23,6 @@ export class AuthService {
     signOut() {
         return this.fireAuth.signOut().then(() => {
             this.router.navigate(['/strength-builder/home']);
-            this.spinner.hide();
         }, err => {
             console.log(err)
         })

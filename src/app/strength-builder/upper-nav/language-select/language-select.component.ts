@@ -13,7 +13,6 @@ export class LanguageSelectComponent {
   constructor(private translate: TranslateService, private spinner: NgxSpinnerService) {
     this.currentLang = translate.currentLang;
     translate.onLangChange.subscribe(langChangeEvent => {
-      console.log(langChangeEvent.lang)
       this.currentLang = langChangeEvent.lang;
     });
   }
